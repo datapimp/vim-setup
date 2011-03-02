@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/jonathan/Projects/backbone-express-mongoose-socketio'
+let g:netrw_dirhist_2='/Users/jonathan/Projects/wmx-web'
+let g:netrw_dirhist_3='/Users/jonathan/Projects/wmx-rails-api'
+let g:netrw_dirhist_4='/Users/jonathan/Projects/wmx-web/app/coffeescripts/wmx'
+let g:netrw_dirhist_5='/Users/jonathan/Projects/wmx-web'
+let g:netrw_dirhist_6='/Users/jonathan/Projects/wmx-web/app/coffeescripts/wmx'
+let g:netrw_dirhist_7='/Users/jonathan/Projects/wmx-rails-api'
+let g:netrw_dirhist_8='/Users/jonathan/Projects/wmx-web'

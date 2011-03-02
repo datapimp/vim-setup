@@ -32,7 +32,7 @@ hi Character       guifg=#E6DB74
 hi Number          guifg=#AE81FF
 hi String          guifg=#E6DB74
 hi Conditional     guifg=#F92672               gui=bold
-hi Constant        guifg=#AE81FF               gui=bold
+hi Constant        guifg=#A6E22E               gui=bold
 hi Cursor          guifg=#000000 guibg=#F8F8F0
 hi Debug           guifg=#BCA3A3               gui=bold
 hi Define          guifg=#66D9EF
@@ -44,15 +44,15 @@ hi DiffText                      guibg=#4C4745 gui=italic,bold
 
 hi Directory       guifg=#A6E22E               gui=bold
 hi Error           guifg=#960050 guibg=#1E0010
-hi ErrorMsg        guifg=#F92672 guibg=#232526 gui=bold
+hi ErrorMsg        guifg=#F92672 guibg=#1B1D1E gui=bold
 hi Exception       guifg=#A6E22E               gui=bold
 hi Float           guifg=#AE81FF
-hi FoldColumn      guifg=#465457 guibg=#000000
-hi Folded          guifg=#465457 guibg=#000000
-hi Function        guifg=#A6E22E
+hi FoldColumn      guifg=#465457 guibg=#1B1D1E
+hi Folded          guifg=#F8F8F0 guibg=#1B1D1E
+hi Function        guifg=#A6e22e
 hi Identifier      guifg=#FD971F
 hi Ignore          guifg=#808080 guibg=bg
-hi IncSearch       guifg=#C4BE89 guibg=#000000
+hi IncSearch       guifg=#C4BE89 guibg=#1B1D1E
 
 hi Keyword         guifg=#F92672               gui=bold
 hi Label           guifg=#E6DB74               gui=none
@@ -76,7 +76,7 @@ hi Question        guifg=#66D9EF
 hi Repeat          guifg=#F92672               gui=bold
 hi Search          guifg=#FFFFFF guibg=#455354
 " marks column
-hi SignColumn      guifg=#A6E22E guibg=#232526
+hi SignColumn      guifg=#A6E22E guibg=#1B1D1E
 hi SpecialChar     guifg=#F92672               gui=bold
 hi SpecialComment  guifg=#465457               gui=bold
 hi Special         guifg=#66D9EF guibg=bg      gui=italic
@@ -118,8 +118,8 @@ else
    hi Comment         guifg=#465457
    hi CursorLine                    guibg=#293739
    hi CursorColumn                  guibg=#293739
-   hi LineNr          guifg=#BCBCBC guibg=#232526
-   hi NonText         guifg=#BCBCBC guibg=#232526
+   hi LineNr          guifg=#BCBCBC guibg=#1B1D1E
+   hi NonText         guifg=#BCBCBC guibg=#1B1D1E
 end
 
 "

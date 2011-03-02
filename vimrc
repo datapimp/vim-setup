@@ -5,7 +5,10 @@ set ruler
 set autoindent
 set nobackup
 set noswapfile
-set guifont=Monaco:h13
+set guifont=Monaco:h20
+set statusline=%t%(\ [%n%M]%)%(\ %H%R%W%)\ %(%c-%v,\ %l\ of\ %L%)
+
+call pathogen#runtime_append_all_bundles()
 
 syntax on
 filetype plugin indent on
@@ -25,6 +28,9 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
+
+" might be a bad idea
+set autoread
 
 " Searching
 set hlsearch
@@ -75,6 +81,7 @@ au FileType python                                   set noexpandtab
 
 " Thorfile, Rakefile and Gemfile are Ruby
 au BufRead,BufNewFile {Vagrantfile,Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
+au BufRead,BufNewFile *.haml.jst set ft=haml
 
 " md, markdown, and mk are markdown and define buffer-local preview
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
@@ -113,24 +120,20 @@ set modelines=10
 
 " Default color scheme
 colorscheme Spectacular
-
+set guifont=Liberation\ Mono\ Regular:h20
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 
-"Directories for swp files
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
+noremap <Leader>vm :RVmodel <CR>
+noremap <Leader>vc :RVcontroller <CR> 
+noremap <Leader>vv :RVview <CR>
+noremap <Leader>vu :RVunittest <CR>
+noremap <Leader>vM :RVmigration <CR>
 
-noremap <Leader>r :w !reload refresh<CR>
-noremap <Leader>css :w !reload css<CR>
-noremap <Leader>js :w !reload js<CR>
-
-map <Leader>m :RSmodel <CR>
-map <Leader>c :RScontroller <CR> 
-map <Leader>v :RSview <CR>
+noremap <Leader>cc :!coffee --output ./lib --compile ./src/*.coffee <CR>
 
 if has("folding")
  set foldenable
@@ -140,3 +143,4 @@ if has("folding")
  set foldtext=strpart(getline(v:foldstart),0,50).'\ ...\ '.substitute(getline(v:foldend),'^[\ #]*','','g').'\ '
 endif
 
+"let coffee_compile_on_save = 1
